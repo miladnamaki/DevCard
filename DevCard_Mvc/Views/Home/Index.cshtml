@@ -5,7 +5,7 @@
 <section class="about-me-section p-3 p-lg-5 theme-bg-light">
     <div class="container">
         <div class="profile-teaser media flex-column flex-lg-row">
-            <img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" src="~/assets/images/me.jpg" alt="">
+            <img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" style="height: 200px; width: 200px;" src="~/assets/images/me.jpg" alt="">
             <div class="media-body">
                 <h2 class="name font-weight-bold mb-1">میلاد نمکی </h2>
                 <div class="tagline mb-3">برنامه نویس ارشد</div>
@@ -30,9 +30,12 @@
     </div>
 </section>
 
-<partial name="Projects" />
+@*<partial name="Projects" />*@
 @*@await Html.PartialAsync("Projects", new List<Project>())*@
-@await Html.PartialAsync("Projects", new List<Project>())
+@*@await Html.PartialAsync("Projects", new List<Project>())*@
+
+@await  Component.InvokeAsync("Projects")
+
 <div class="container">
     <hr>
 </div>
