@@ -115,3 +115,5 @@ H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnaly
 H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Components\Projects\_Projects.cshtml.g.cs
+H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Shared\Header.cshtml.g.cs
+H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Shared\Footer.cshtml.g.cs

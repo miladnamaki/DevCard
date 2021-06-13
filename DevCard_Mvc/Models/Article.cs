@@ -9,7 +9,7 @@
 
         public Article(int id, string title, string description, string image)
         {
-            Id = id;
+            this.Id = id;
             this.Title = title;
             this.Description = description;
             this.Image = image;

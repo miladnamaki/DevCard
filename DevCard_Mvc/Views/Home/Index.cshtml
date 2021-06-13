@@ -30,14 +30,12 @@
     </div>
 </section>
 
-@*<partial name="Projects" />*@
+@*<partial name="Projects" />*@  
 @*@await Html.PartialAsync("Projects", new List<Project>())*@
 @*@await Html.PartialAsync("Projects", new List<Project>())*@
 
-@await  Component.InvokeAsync("Projects")
+@await  Component.InvokeAsync("Projects" )
 
 <div class="container">
     <hr>
 </div>
-
-@await Component.InvokeAsync("LetsArticle")
