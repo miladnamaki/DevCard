@@ -1,7 +1,10 @@
-﻿using DevCard_Mvc.Models;
+﻿using System;
+using DevCard_Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
 
 namespace DevCard_Mvc.Controllers
 {
@@ -19,9 +22,29 @@ namespace DevCard_Mvc.Controllers
             
             return View();
         }
+        [HttpGet]
+        //vaghti mikhaym etelato az az contorl befrestim be claient mishe HttpGetAttribute 
         public IActionResult Contact()
         {
-            return View();
+            var model = new SendContect();
+
+            return View(model);
+        }
+        [HttpPost]
+        //vaghti mikhaym az form etelate befrestim be control mishe post
+        //public  JsonResult Contact(IFormCollection from )
+        //{
+        //    var Name = from["name"];
+
+        //    return Json(Ok());
+        //}
+        [HttpPost]
+        public JsonResult Contect(SendContect from)
+        {
+            Console.WriteLine(from.ToString());
+
+            return Json(Ok());
+
         }
        
 
