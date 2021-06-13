@@ -1,5 +1,6 @@
 ﻿using DevCard_Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DevCard_Mvc.Controllers
@@ -15,6 +16,7 @@ namespace DevCard_Mvc.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
         public IActionResult Contact()
