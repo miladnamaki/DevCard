@@ -30,20 +30,36 @@ namespace DevCard_Mvc.Controllers
 
             return View(model);
         }
-        [HttpPost]
+        //[HttpPost]
         //vaghti mikhaym az form etelate befrestim be control mishe post
-        //public  JsonResult Contact(IFormCollection from )
+        //public  JsonResult Contact(IFormCollection from )      2=vaghti daghighan nemidonim fildamon chian 
         //{
         //    var Name = from["name"];
 
         //    return Json(Ok());
         //}
-        [HttpPost]
-        public JsonResult Contect(SendContect from)
-        {
-            Console.WriteLine(from.ToString());
+        //[HttpPost]
+        //public JsonResult Contect(SendContect from)      1= modelbinding az tarighe contect class anjam mishe
+        //                                                      vaghti middonim che fildaie niaz darim
 
-            return Json(Ok());
+        //{
+        //    Console.WriteLine(from.ToString());
+
+        //    return Json(Ok());
+
+        //}
+        [HttpPost]
+        public IActionResult Contact(SendContect form)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = " اطلاعات وارد شده صحیح نیست ، لطفا دوباره تلاش کنید!";
+                return View(form);
+            }
+
+            ViewBag.Success= "پیغام شما با موفقت ارسال شد با تشکر ";
+            return View();
+            //return RedirectToAction("Index");
 
         }
        
