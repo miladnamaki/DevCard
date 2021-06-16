@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevCard_Mvc.Models
 {
@@ -16,8 +17,8 @@ namespace DevCard_Mvc.Models
 
         public string Email { get; set;  }
         public string Message { get; set; }
-        public string Services { get; set; }
- 
+        public int Services { get; set; }
+         public SelectList servicees { get; set;  }
 
     }
 }

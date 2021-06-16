@@ -5,31 +5,41 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevCard_Mvc.Controllers
 {
     public class HomeController : Controller
     {
-        
 
-        public HomeController()
+        private readonly List<Services> _services = new List<Services>
         {
-            
-        }
+            new Services(1,"نقره ای "),
+            new Services(2,"طلایی "),
+            new Services(3,"پلاتین "),
+            new Services(4,"الماس "),
+
+        };
 
         public IActionResult Index()
         {
-            
+
             return View();
         }
+
         [HttpGet]
         //vaghti mikhaym etelato az az contorl befrestim be claient mishe HttpGetAttribute 
         public IActionResult Contact()
         {
-            var model = new SendContect();
-
-            return View(model);
+            var model = new SendContect
+            {
+                servicees = new SelectList(_services,"Id","Name")
+            };
+          
+            return View(model); 
         }
+
+        //}
         //[HttpPost]
         //vaghti mikhaym az form etelate befrestim be control mishe post
         //public  JsonResult Contact(IFormCollection from )      2=vaghti daghighan nemidonim fildamon chian 
@@ -49,25 +59,32 @@ namespace DevCard_Mvc.Controllers
 
         //}
         [HttpPost]
-        public IActionResult Contact(SendContect form)
-        {
-            if (!ModelState.IsValid)
+            public IActionResult Contact(SendContect form)
             {
-                ViewBag.error = " اطلاعات وارد شده صحیح نیست ، لطفا دوباره تلاش کنید!";
+                form.servicees = new SelectList(_services, "Id", "Name");
+            if (!ModelState.IsValid)
+                {
+                    ViewBag.error = " اطلاعات وارد شده صحیح نیست ، لطفا دوباره تلاش کنید!";
+                  
+                    return View(form);
+                }
+                     form = new SendContect()
+                     {
+                                servicees = new SelectList(_services, "Id", "Name")
+                     };
+                     ViewBag.Success = "پیغام شما با موفقت ارسال شد با تشکر ";
+            ModelState.Clear();//pak mikone foromo
+               
                 return View(form);
+                //return RedirectToAction("Index");
             }
 
-            ViewBag.Success= "پیغام شما با موفقت ارسال شد با تشکر ";
-            return View();
-            //return RedirectToAction("Index");
+
+            [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+            public IActionResult Error()
+            {
+                return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            }
 
         }
-       
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
 }
