@@ -9,7 +9,6 @@ H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\ref\DevCard_Mvc.dll
 H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\DevCard_Mvc.pdb
 H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\DevCard_Mvc.Views.dll
 H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\DevCard_Mvc.Views.pdb
-H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.csproj.AssemblyReference.cache
 H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.GeneratedMSBuildEditorConfig.editorconfig
 H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.AssemblyInfoInputs.cache
 H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.AssemblyInfo.cs
@@ -117,3 +116,5 @@ H:\Core.project\DevCard\DevCard_Mvc\bin\Debug\net5.0\runtimes\win-arm64\lib\net5
 H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\Components\Projects\_Projects.cshtml.g.cs
 H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Shared\Header.cshtml.g.cs
 H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Shared\Footer.cshtml.g.cs
+H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\Razor\Views\Home\ProjectDetails.cshtml.g.cs
+H:\Core.project\DevCard\DevCard_Mvc\obj\Debug\net5.0\DevCard_Mvc.csproj.AssemblyReference.cache

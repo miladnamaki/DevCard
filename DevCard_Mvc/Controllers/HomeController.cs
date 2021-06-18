@@ -3,6 +3,7 @@ using DevCard_Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Diagnostics;
+using DevCard_Mvc.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -38,6 +39,12 @@ namespace DevCard_Mvc.Controllers
           
             return View(model); 
         }
+        public IActionResult ProjectDetails(long id)
+        {
+            var project = ProjectStore.GetProjectBy(id);
+            return View(project);
+        }
+
 
         //}
         //[HttpPost]
